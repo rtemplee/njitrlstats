@@ -339,4 +339,5 @@ def select_page(page):
     return no_update, filters['teams'], filters['matches'], filters['stats'], filters['ranks']
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True,
+                   host='0.0.0.0')
