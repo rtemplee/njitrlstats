@@ -1,0 +1,82 @@
+{
+    "Wavy": {
+        "platform":"steam",
+        "userid":"76561198805454986",
+        "division":"1"
+    },
+    "iExotic": {
+        "platform":"epic",
+        "userid":"iiExoticx",
+        "division":"1"
+    },
+    "TheCrazyTrain": {
+        "platform":"steam",
+        "userid":"76561198315494673",
+        "division":"1"
+    },
+    "Sparks": {
+        "platform":"epic",
+        "userid":"lllsparkslll",
+        "division":"1"
+    },
+    "Lasanga": {
+        "platform":"steam",
+        "userid":"76561198253274526",
+        "division":"2"
+    },
+    "MoBomba": {
+        "platform":"epic",
+        "userid":"TheBrownBoondock",
+        "division":"2"
+    },
+    "BeastBoy": {
+        "platform":"steam",
+        "userid":"76561198971704982",
+        "division":"2"
+    },
+    "Crandervoid": {
+        "platform":"epic",
+        "userid":"Crandervo1d",
+        "division":"2"
+    },
+    "Chi": {
+        "platform":"steam",
+        "userid":"__Chi__",
+        "division":"Other"
+    },
+    "Tacki": {
+        "platform":"steam",
+        "userid":"TackiGG",
+        "division":"Other"
+    },
+    "Aylo": {
+        "platform":"steam",
+        "userid":"itzaylo",
+        "division":"Other"
+    },
+    "Andy": {
+        "platform":"steam",
+        "userid":"76561198968803489",
+        "division":"Other"
+    },
+    "Mystikal": {
+        "platform":"steam",
+        "userid":"76561198666262998",
+        "division":"Other"
+    },
+    "Tactician": {
+        "platform":"steam",
+        "userid":"tactician_rl",
+        "division":"Other"
+    },
+    "Apena": {
+        "platform":"steam",
+        "userid":"76561198795633240",
+        "division":"Other"
+    },
+    "Bouje": {
+        "platform":"steam",
+        "userid":"BoujeRL",
+        "division":"Other"
+    }
+}

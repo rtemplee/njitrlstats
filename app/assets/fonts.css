@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Monster';
+    src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('fonts/FiraCode-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Chivo';
+    src: url('fonts/ChivoMono-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Jaldi';
+    src: url('fonts/Jaldi-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Jaldi Bold';
+    src: url('fonts/Jaldi-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FS Stadium';
+    src: url('fonts/FS-Stadium-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'FS Stadium Cond';
+    src: url('fonts/FS-Stadium-Bold-Condensed.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('fonts/ProximaNova-Regular.otf') format('opentype');
+}
