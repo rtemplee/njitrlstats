@@ -4,23 +4,18 @@ from datetime import datetime
 import time
 
 import dash
-from dash import html, dcc, DiskcacheManager, Input, Output, no_update
+from dash import html, dcc, Input, Output, no_update
 import dash_bootstrap_components as dbc
 import pandas as pd
-import diskcache
 
 from rank_test import get_ranks
 import dbaction as dba
-
-cache = diskcache.Cache("./cache")
-bcm = DiskcacheManager(cache)
 
 def format_img(img):
     b64encoded_img=base64.b64encode(open(f'{img}', 'rb').read())
     return f'data:image/png;base64,{b64encoded_img.decode()}'
 
-app = dash.Dash(__name__,
-                background_callback_manager=bcm)
+app = dash.Dash(__name__)
 
 players_dict = json.load(open('app/players.json'))
 
@@ -159,7 +154,7 @@ def select_team(value, timestamp, *args):
     print(f'clicked id f: -{clicked_id_f}-')
     print(f'clicked id type: -{type(clicked_id_f)}-')
     print(f'value: -{value}-')
-
+    
     # Preset values
     value2title = {'1': 'Division 1', 
                    '2': 'Division 2',
