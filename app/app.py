@@ -200,17 +200,16 @@ def select_team(value, timestamp, *args):
     player2ranks = {}
     for player, info in players_dict.items():
         try:
-            match value:
-                case 'all': pass
-                case 'active':
-                    if info['division'] not in ('1', '2'):
-                        continue
-                case 'inactive':
-                    if info['division'] in ('1', '2'):
-                        continue
-                case _:
-                    if info['division'] != value:
-                        continue
+            if value == 'all': pass
+            elif value == 'active':
+                if info['division'] not in ('1', '2'):
+                    continue
+            elif value == 'inactive':
+                if info['division'] in ('1', '2'):
+                    continue
+            else:
+                if info['division'] != value:
+                    continue
                     
             player2ranks[player] = pd.read_sql(f'SELECT * FROM {player}', con)
             
@@ -219,28 +218,26 @@ def select_team(value, timestamp, *args):
             pass
     
     # Sort names (Alphabetical by default)
-    
-    match clicked_id_f:
-        case '1v1' | '2v2' | '3v3':
-            player2rank = {}
-            for player, df in player2ranks.items():
-                player2rank[player] = df.loc[rank2index[clicked_id_f]]['MMR']
-            player2rank_sorted = sorted(player2rank.items(), 
-                                        key=lambda x:x[1],
-                                        reverse=True)
-            sortednames = dict(player2rank_sorted).keys()
-            
-            filters[clicked_id_f] = {'border-bottom': '2px solid white',
-                                     'font-weight': 'bold',
-                                     'color': 'white',
-                                     'cursor': 'default'}
-        case _:
-            sortednames = sorted(player2ranks.keys(), 
-                                 key=lambda x:x.lower())
-            
-            filters['name'] = {'color': 'white', 
-                               'font-weight': 'bold',
-                               'cursor': 'default'}
+    if clicked_id_f in ['1v1', '2v2', '3v3']:
+        player2rank = {}
+        for player, df in player2ranks.items():
+            player2rank[player] = df.loc[rank2index[clicked_id_f]]['MMR']
+        player2rank_sorted = sorted(player2rank.items(), 
+                                    key=lambda x:x[1],
+                                    reverse=True)
+        sortednames = dict(player2rank_sorted).keys()
+        
+        filters[clicked_id_f] = {'border-bottom': '2px solid white',
+                                    'font-weight': 'bold',
+                                    'color': 'white',
+                                    'cursor': 'default'}
+    else:
+        sortednames = sorted(player2ranks.keys(), 
+                                key=lambda x:x.lower())
+        
+        filters['name'] = {'color': 'white', 
+                            'font-weight': 'bold',
+                            'cursor': 'default'}
         
     # Add ranks of names to table
     players_table = []
